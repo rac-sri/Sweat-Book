@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-export const Welcome = () => (
+export const Welcome = props => (
   <View style={{flex: 1}}>
     <View style={styles.titleContainer}>
       <Text style={styles.title}>Exercises!</Text>
@@ -11,7 +11,7 @@ export const Welcome = () => (
     </View>
     <View style={{padding: 30}}>
       <TouchableOpacity style={styles.button}>
-        <Text>Start Workout</Text>
+        <Text onPress={props.startWorkout()}>Start Workout</Text>
       </TouchableOpacity>
     </View>
   </View>
