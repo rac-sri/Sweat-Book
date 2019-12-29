@@ -1,20 +1,27 @@
 import React from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, Button, TouchableOpacity} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 export const Welcome = props => (
-  <View style={{flex: 1}}>
+  <LinearGradient
+    colors={['#4c669f', '#3b5998', '#192f6a']}
+    style={styles.container}>
     <View style={styles.titleContainer}>
       <Text style={styles.title}>Exercises!</Text>
     </View>
     <View style={styles.lastWorkoutContainer}>
       <Text style={styles.lastWorkoutTitle}>Log your fitness</Text>
     </View>
-    <View style={{padding: 30}}>
+    <View style={{padding: 70, top: 280}}>
       <TouchableOpacity style={styles.button}>
-        <Text onPress={props.startWorkout}>Start Workout</Text>
+        <Button
+          title="Start Workout"
+          color="#k1f4ff"
+          onPress={props.startWorkout}
+        />
       </TouchableOpacity>
     </View>
-  </View>
+  </LinearGradient>
 );
 
 const styles = StyleSheet.create({
@@ -30,7 +37,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 48,
     fontWeight: '500',
-    color: 'blue',
+    color: 'white',
     textAlign: 'center',
   },
   lastWorkoutContainer: {
@@ -39,7 +46,8 @@ const styles = StyleSheet.create({
   lastWorkoutTitle: {
     fontSize: 30,
     fontWeight: '100',
-    color: 'blue',
+    color: 'white',
+    padding: 60,
   },
   button: {
     borderColor: '#EADCDC',
