@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import ScrollableTabView from 'react-native-scrollable-tab-view';
+import ViewPager from '@react-native-community/viewpager';
 
-export const Main = () => {
-  return (
-    <ScrollableTabView>
-      <Text tabLabel="Tab #1">My</Text>
-      <Text tabLabel="Tab #2">favorite</Text>
-      <Text tabLabel="Tab #3">project</Text>
-    </ScrollableTabView>
-  );
-};
+export const Main = () => (
+  <ViewPager style={styles.viewPager} initialPage={0}>
+    <View key="1">
+      <Text>First page</Text>
+    </View>
+    <View key="2">
+      <Text>Second page</Text>
+    </View>
+  </ViewPager>
+);
 
 const styles = StyleSheet.create({
-  view: {
+  viewPager: {
     flex: 1,
   },
 });

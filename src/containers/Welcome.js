@@ -11,7 +11,7 @@ export const Welcome = props => (
     </View>
     <View style={{padding: 30}}>
       <TouchableOpacity style={styles.button}>
-        <Text onPress={props.startWorkout()}>Start Workout</Text>
+        <Text onPress={props.startWorkout}>Start Workout</Text>
       </TouchableOpacity>
     </View>
   </View>
