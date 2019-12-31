@@ -1,4 +1,4 @@
-import {createAsyncCreator} from '../services/asyncCreators';
+import {createAsyncCreator} from '../services/asyncCreator';
 import * as api from '../services/api';
 import * as types from './types';
 
